@@ -12,10 +12,12 @@ class CityRepository {
         _cities.add(city)
     }
 
+    fun updateCity(oldCity: City, updateCity: City){
+        val index = _cities.indexOf(oldCity)
+        if (index != -1) {
+            _cities[index] = updateCity
+        }
+    }
     val cities: List<City>
         get() = _cities
 }
-
-
-
-
